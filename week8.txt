@@ -1,0 +1,31 @@
+การใช้ Git
+- ลง Git
+- พิมพ์ใน  Command Prompt / Terminal คำสั่ง git --version เช็คการติดตั้ง
+- พิมพ์คำสั่ง git init ทุกครั้งที่สร้าง git repository ใหม่
+- คำสั่ง git status เอาไว้เช็คสถานะต่างๆของไฟล์
+- การเพิ่มไฟล์เข้า staging area คำสั่ง 
+	git add <ไฟล์.>
+- ตั้งค่าชื่อผู้ commit มีสองแบบ
+	1.เครื่องสาธารณะ
+		git config user.name "Your Name"
+		git config user.email "yourmail@ku.th"
+	2.เครื่องส่วนบุคคล
+		git config --global user.name "Your Name"
+		git config --global user.email "yourmail@ku.th"
+- การ commit คำสั่ง
+	git commit -m "ข้อความ"
+- การดู Checkpoint ทั้งหมด (git log adog)
+	git log --all --decorate --oneline --graph
+- เชื่อม local repository (git repository ในเครื่อง) กับ github ด้วยคำสั่ง 
+	git remote add <ชื่อ remote เช่น origin> <git url>
+  กรณีตั้งชื่อremote ผิดใช้คำสั่ง
+	git remote remove <ชื่อ remote>
+- อัพไฟล์และประวัติไป github คำสั่ง
+	git push -u <ชื่อ remote> master
+	การอัพครั้งต่อไปใช้ git push
+- การย้อนหลังไปที่ Checkpoint ใช้คำสั่ง
+	git checkout <commit-id>
+		หรือ
+	git checkout <commit-id>  <ชื่อไฟล์>
+-กรณีย้ายเครื่อง ดึง git repository ในsever มา
+	git clone <git-url>
