@@ -1,0 +1,22 @@
+-สร้าง branch คำสั่ง
+	(วิธี1)git branch <branch-name>
+	(วิธี2 สร้างแล้วสลับไปเลย) git checkout -b <branch-name>
+-เช็คว่ามี branch ไรบ้าง คำสั่ง
+	git branch
+ จะมี * อยู่หน้าbranchที่เรากำลังอยู่
+-ย้ายเราไปอยู่ที่ branch อื่น คำสั่ง
+	git checkout <branch-name>
+-การ Commit ในแต่ละ branch จะแยกออกจากกันเป็นรูปแบบของต้นไม้
+-การเอาbranch ขึ้น git คำสั่ง
+	git push origin <branch-name>
+-การ merge branch ต้องย้ายตัวเราไปที่ branch หลักที่เราต้องการ แล้ว branch อีกอันมารวมกัน
+	git merge <branch-name>
+ หลังจะ merge ต้อง git push origin master
+
+การMerge
+- หลังจาก git merge <branch-name> แล้วแก้ conflict เสร็จต้อง git add <file-conflict-name>
+
+การPull
+- git pull origin <branch-name>
+
+***กรณีมี Conflict ต้องแก้แล้ว git add <file-conflict-name> ทุกครั้ง ถึงค่อย commit/push***
